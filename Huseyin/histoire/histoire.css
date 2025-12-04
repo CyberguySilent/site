@@ -1,0 +1,43 @@
+/* styles.css */
+
+/* Fond général et texte */
+body {
+    background: linear-gradient(to right, black, gray);
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Titre principal */
+h1 {
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* Sections */
+section {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+/* Titres des sections */
+section h2 {
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* Paragraphes */
+section p {
+    color: white;
+    line-height: 1.6;
+}
+
+/* Footer / adresse */
+address {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
