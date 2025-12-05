@@ -1,7 +1,7 @@
 body {
   padding-left: 11em;
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: white;
+  color: white; /* tout le texte blanc */
   background: linear-gradient(to right, black, gray);
 }
 
@@ -12,17 +12,17 @@ ul.navbar {
   position: absolute;
   top: 2em;
   left: 1em;
-  width: 9em 
+  width: 9em;
 }
 
 h1 {
   text-align: center;
-  font-family: Helvetica, Geneva, Arial,
-  SunSans-Regular, sans-serif; 
-
+  font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif; 
+  color: white; /* sécurisé */
 }
-.index{
-	color: gray;
+
+.index {
+  color: white; /* était gris → maintenant blanc */
 }
 
 a {
@@ -31,18 +31,20 @@ a {
 }
 
 ul.navbar li {
-  background:linear-gradient(to right, black, gray);
+  background: linear-gradient(to right, black, gray);
   margin: 0.5em 0;
   padding: 0.3em;
-  border-right:linear-gradient(to right, gray, black) 
+  border-right: 2px solid gray; /* ton ancienne valeur n'était pas valide */
 }
 
 ul.navbar a {
-  text-decoration: none 
+  text-decoration: none;
+  color: white; /* sécurité */
 }
 
 address {
   margin-top: 1em;
   padding-top: 1em;
-  border-top: thin dotted 
+  border-top: thin dotted white; /* visible sur fond sombre */
+  color: white;
 }
