@@ -1,83 +1,102 @@
-body {
-  padding-left: 11em;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: white;
-  background: linear-gradient(to right, black, gray);
+/* ---- CSS du tutoriel (même style + mêmes couleurs) ---- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: linear-gradient(to right, black, gray);
+  color: white;
+  padding-left: 11em;
+}
+
+/* --- NAVBAR --- */
 ul.navbar {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  list-style: none;
   position: absolute;
   top: 2em;
   left: 1em;
-  width: 9em; 
-}
-
-h1, h2 { /* Correction: le sélecteur était h1,1. Ajout de h2. */
-  text-align: center; /* Ajout du point-virgule manquant */
-  font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
-  color: #FFD700; /* Or pour le titre principal, attire l'attention */
-}
-
-h2 {
-    text-align: left;
-    margin-left: -9em; /* Pour aligner avec le contenu principal malgré le padding du body */
-}
-
-.tuto {
-  color: gray; /* Bleu clair pour l'élément actif du menu */
-}
-
-.index {
-  color: #ADD8E6; /* Bleu clair pour l'élément actif du menu */
+  padding: 0;
+  margin: 0;
+  width: 10em;
 }
 
 ul.navbar li {
-  background: linear-gradient(to right, black, #333333); /* Gris foncé pour le menu */
+  background: linear-gradient(to right, black, #3a3a3a);
   margin: 0.5em 0;
-  padding: 0.3em;
-  border-right: 5px solid #FFD700; /* Bordure droite en or, plus claire et visible */
+  padding: 0.5em;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+ul.navbar li:hover {
+  background: linear-gradient(to right, #555, black);
+  transform: translateX(6px);
 }
 
 ul.navbar a {
-  text-decoration: none;
-  display: block; /* Rend tout le bloc cliquable */
-  padding: 0.2em;
-}
-
-a:link {
   color: white;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
 }
 
-a:visited {
-  color: #C0C0C0; /* Gris argenté pour les liens visités */
-}
-
-address {
-  margin-top: 2em;
-  padding-top: 1em;
-  border-top: thin dotted white;
-  font-style: normal; /* Rendre le texte moins penché */
-  font-size: 0.8em;
+/* --- TITRE PRINCIPAL --- */
+h1 {
   text-align: center;
+  margin-top: 2em;
+  font-size: 2.4em;
+  font-family: Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
 }
 
-/* Nouveau style pour les sections du tutoriel */
+p {
+  text-align: center;
+  margin: 1em auto;
+  width: 70%;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+/* --- SECTIONS DU TUTO --- */
 .tuto-section {
-    background-color: rgba(51, 51, 51, 0.5); /* Arrière-plan semi-transparent */
-    padding: 1em;
-    margin-bottom: 1.5em;
-    border-radius: 8px; /* Coins arrondis pour un look moderne */
-    border-left: 5px solid #ADD8E6; /* Ligne de démarcation pour chaque étape */
+  width: 70%;
+  margin: 2em auto;
+  padding: 1.5em;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
-.tuto-section p {
-    line-height: 1.5;
+.tuto-section h2 {
+  font-size: 1.6em;
+  margin-bottom: 0.4em;
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
+.tuto-section p,
 .tuto-section ul {
-    list-style-type: square;
-    margin-left: 1.5em;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+.tuto-section ul li {
+  margin-left: 1.5em;
+  margin-top: 0.4em;
+}
+
+/* --- FOOTER --- */
+address {
+  margin-top: 3em;
+  text-align: center;
+  padding: 1em 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
 }
