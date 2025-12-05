@@ -15,6 +15,10 @@ h1 {
     margin-bottom: 40px;
 }
 
+.histoire {
+    color: gray; /* Bleu clair pour l'élément actif du menu */
+}
+
 /* Sections */
 section {
     background-color: rgba(0, 0, 0, 0.6);

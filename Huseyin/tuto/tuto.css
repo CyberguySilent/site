@@ -26,6 +26,10 @@ h2 {
     margin-left: -9em; /* Pour aligner avec le contenu principal malgré le padding du body */
 }
 
+.tuto {
+  color: gray; /* Bleu clair pour l'élément actif du menu */
+}
+
 .index {
   color: #ADD8E6; /* Bleu clair pour l'élément actif du menu */
 }
