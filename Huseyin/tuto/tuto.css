@@ -1,4 +1,4 @@
-/* ---- CSS du tutoriel (même style + mêmes couleurs) ---- */
+/* ---- CSS du tutoriel (style sombre + harmonisé) ---- */
 
 * {
   margin: 0;
@@ -11,62 +11,78 @@ body {
   background: linear-gradient(to right, black, gray);
   color: white;
   padding-left: 11em;
+  line-height: 1.6em;
 }
 
 /* --- NAVBAR --- */
 ul.navbar {
   list-style: none;
-  position: absolute;
+  position: fixed; /* reste visible au scroll */
   top: 2em;
   left: 1em;
   padding: 0;
   margin: 0;
   width: 10em;
+  z-index: 1000;
 }
 
 ul.navbar li {
   background: linear-gradient(to right, black, #3a3a3a);
   margin: 0.5em 0;
-  padding: 0.5em;
+  padding: 0.6em 1em;
   border-radius: 8px;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 ul.navbar li:hover {
   background: linear-gradient(to right, #555, black);
-  transform: translateX(6px);
+  transform: translateX(5px);
 }
 
 ul.navbar a {
+  text-decoration: none;
   color: white;
   font-weight: bold;
-  text-decoration: none;
   display: block;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
-/* --- TITRE PRINCIPAL --- */
+/* --- TITRES --- */
 h1 {
   text-align: center;
-  margin-top: 2em;
-  font-size: 2.4em;
   font-family: Helvetica, Arial, sans-serif;
+  font-size: 2.4em;
   letter-spacing: 1px;
+  margin-top: 2em;
 }
 
-p {
-  text-align: center;
-  margin: 1em auto;
-  width: 70%;
+h2 {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-bottom: 0.5em;
+}
+
+/* --- PARAGRAPHES ET LISTES --- */
+p, ul {
   font-size: 1.1em;
   line-height: 1.6em;
+  text-align: center;
+  max-width: 800px;
+  margin: 1em auto;
 }
 
-/* --- SECTIONS DU TUTO --- */
+ul li {
+  margin-left: 1.5em;
+  margin-top: 0.3em;
+  text-align: left;
+}
+
+/* --- SECTIONS DU TUTORIEL --- */
 .tuto-section {
   width: 70%;
   margin: 2em auto;
-  padding: 1.5em;
+  padding: 1.8em;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(4px);
   border-radius: 12px;
@@ -74,29 +90,12 @@ p {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
-.tuto-section h2 {
-  font-size: 1.6em;
-  margin-bottom: 0.4em;
-  color: white;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-.tuto-section p,
-.tuto-section ul {
-  font-size: 1.1em;
-  line-height: 1.6em;
-}
-
-.tuto-section ul li {
-  margin-left: 1.5em;
-  margin-top: 0.4em;
-}
-
-/* --- FOOTER --- */
+/* --- FOOTER / ADRESSE --- */
 address {
   margin-top: 3em;
-  text-align: center;
-  padding: 1em 0;
+  padding: 1.2em 0;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
   color: white;
+  font-style: normal;
 }

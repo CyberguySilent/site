@@ -1,50 +1,89 @@
+/* ---- Styles généraux ---- */
 body {
-  padding-left: 11em;
+  padding-left: 11em; /* espace pour la navbar */
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: white; /* tout le texte blanc */
+  color: white;
   background: linear-gradient(to right, black, gray);
+  line-height: 1.6em;
 }
 
+/* --- NAVBAR --- */
 ul.navbar {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  position: absolute;
+  position: fixed; /* reste visible au scroll */
   top: 2em;
   left: 1em;
-  width: 9em;
-}
-
-h1 {
-  text-align: center;
-  font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif; 
-  color: white; /* sécurisé */
-}
-
-.index {
-  color: white; /* était gris → maintenant blanc */
-}
-
-a {
-  color: white;
-  font-weight: bold;
+  width: 10em;
+  z-index: 1000;
 }
 
 ul.navbar li {
-  background: linear-gradient(to right, black, gray);
+  background: linear-gradient(to right, black, #3a3a3a);
   margin: 0.5em 0;
-  padding: 0.3em;
-  border-right: 2px solid gray; /* ton ancienne valeur n'était pas valide */
+  padding: 0.5em 0.8em;
+  border-radius: 6px;
+  border-right: 2px solid gray;
+  transition: all 0.3s ease;
+}
+
+ul.navbar li:hover {
+  background: linear-gradient(to right, #555, black);
+  transform: translateX(5px);
 }
 
 ul.navbar a {
   text-decoration: none;
-  color: white; /* sécurité */
+  color: white;
+  font-weight: bold;
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
-address {
-  margin-top: 1em;
-  padding-top: 1em;
-  border-top: thin dotted white; /* visible sur fond sombre */
+/* --- TITRES --- */
+h1 {
+  text-align: center;
+  font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
   color: white;
+  margin-top: 2em;
+}
+
+h2 {
+  color: white;
+  font-family: Helvetica, Geneva, Arial, sans-serif;
+  margin-bottom: 0.5em;
+}
+
+/* --- PARAGRAPHES ET LISTES --- */
+p, ul {
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+ul li {
+  margin-left: 1.5em;
+  margin-top: 0.3em;
+}
+
+/* --- SECTIONS --- */
+section {
+  width: 70%;
+  margin: 2em auto;
+  padding: 1.5em;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+/* --- FOOTER / ADRESSE --- */
+address {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: thin dotted white;
+  text-align: center;
+  color: white;
+  font-style: normal;
 }
