@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-site créer par huseyin (GTHusYT19,CyberguySilent)
-=======
 # site créer par (GTHusYT19,CyberguySilent)
+https://cyberguysilent.github.io/site/
 
->>>>>>> origin/main
+
