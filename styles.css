@@ -1,18 +1,28 @@
-/* ---- Styles généraux ---- */
-body {
-  padding-left: 11em; /* espace pour la navbar */
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: white;
-  background: linear-gradient(to right, black, gray);
-  line-height: 1.6em;
+/* ---- RESET ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* --- NAVBAR --- */
+/* ---- GLOBAL ---- */
+body {
+  padding-left: 11em;
+  font-family: Georgia, "Times New Roman", serif;
+  color: white;
+  line-height: 1.6em;
+
+  /* FIXED: use relative path or URL */
+  background:
+    url("https://imgs.search.brave.com/lsUOTK_PM-WFLD_zlQiEWN09-x0rH4jI-Y-OJ0dZXq4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE5/ODU0Mzk5Ny9mci9w/aG90by9zZWN1cml0/eS1jYW1lcmEtaXAt/Y2FtZXJhLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1LU1JT/MjFHTjQxMnU2dWdr/azNyMUtCeVFWcG90/VEdMS2NLWHFPLXZt/c0tJPQ");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ---- NAVBAR ---- */
 ul.navbar {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  position: fixed; /* reste visible au scroll */
+  list-style: none;
+  position: fixed;
   top: 2em;
   left: 1em;
   width: 10em;
@@ -22,104 +32,10 @@ ul.navbar {
 ul.navbar li {
   background: linear-gradient(to right, black, #3a3a3a);
   margin: 0.5em 0;
-  padding: 0.5em 0.8em;
-  border-radius: 6px;
-  border-right: 2px solid gray;
-  transition: all 0.3s ease;
-}
-
-ul.navbar li:hover {
-  background: linear-gradient(to right, #555, black);
-  transform: translateX(5px);
-}
-
-ul.navbar a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  display: block;
-  font-family: Georgia, "Times New Roman", serif;
-}
-
-/* --- TITRES --- */
-h1 {
-  text-align: center;
-  font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
-  color: white;
-  margin-top: 2em;
-}
-
-h2 {
-  color: white;
-  font-family: Helvetica, Geneva, Arial, sans-serif;
-  margin-bottom: 0.5em;
-}
-
-/* --- PARAGRAPHES ET LISTES --- */
-p, ul {
-  font-size: 1.1em;
-  line-height: 1.6em;
-}
-
-ul li {
-  margin-left: 1.5em;
-  margin-top: 0.3em;
-}
-
-/* --- SECTIONS --- */
-section {
-  width: 70%;
-  margin: 2em auto;
-  padding: 1.5em;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-}
-
-/* --- FOOTER / ADRESSE --- */
-address {
-  margin-top: 2em;
-  padding-top: 1em;
-  border-top: thin dotted white;
-  text-align: center;
-  color: white;
-  font-style: normal;
-}
-
-/* Appended global snippet */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  background: linear-gradient(to right, black, gray);
-  color: white;
-  padding-left: 11em;
-}
-
-/* --- NAVBAR --- */
-ul.navbar {
-  list-style: none;
-  position: absolute;
-  top: 2em;
-  left: 1em;
-  padding: 0;
-  margin: 0;
-  width: 10em;
-}
-
-ul.navbar li {
-  background: linear-gradient(to right, black, #3a3a3a);
-  margin: 0.5em 0;
-  padding: 0.5em;
+  padding: 0.6em 0.8em;
   border-radius: 8px;
-  transition: 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
 }
 
 ul.navbar li:hover {
@@ -128,13 +44,13 @@ ul.navbar li:hover {
 }
 
 ul.navbar a {
+  text-decoration: none;
   color: white;
   font-weight: bold;
-  text-decoration: none;
   display: block;
 }
 
-/* --- TITRE PRINCIPAL --- */
+/* ---- TITLES ---- */
 h1 {
   text-align: center;
   margin-top: 2em;
@@ -143,49 +59,42 @@ h1 {
   letter-spacing: 1px;
 }
 
-p {
-  text-align: center;
-  margin: 1em auto;
-  width: 70%;
+h2 {
+  margin-bottom: 0.5em;
+  font-size: 1.6em;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* ---- TEXT ---- */
+p,
+ul {
   font-size: 1.1em;
   line-height: 1.6em;
 }
 
-/* --- SECTIONS DU TUTO --- */
+ul li {
+  margin-left: 1.5em;
+  margin-top: 0.4em;
+}
+
+/* ---- SECTIONS ---- */
+section,
 .tuto-section {
   width: 70%;
   margin: 2em auto;
   padding: 1.5em;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(4px);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
-.tuto-section h2 {
-  font-size: 1.6em;
-  margin-bottom: 0.4em;
-  color: white;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-.tuto-section p,
-.tuto-section ul {
-  font-size: 1.1em;
-  line-height: 1.6em;
-}
-
-.tuto-section ul li {
-  margin-left: 1.5em;
-  margin-top: 0.4em;
-}
-
-/* --- FOOTER --- */
+/* ---- FOOTER ---- */
 address {
   margin-top: 3em;
-  text-align: center;
   padding: 1em 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
+  text-align: center;
+  font-style: normal;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
