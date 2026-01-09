@@ -12,8 +12,8 @@ body {
   color: white;
   line-height: 1.6em;
 
-  /* FIXED: use relative path or URL */
-  background:
+  /* FIXED:  use relative path or URL */
+  background: 
     url("https://imgs.search.brave.com/lsUOTK_PM-WFLD_zlQiEWN09-x0rH4jI-Y-OJ0dZXq4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE5/ODU0Mzk5Ny9mci9w/aG90by9zZWN1cml0/eS1jYW1lcmEtaXAt/Y2FtZXJhLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1LU1JT/MjFHTjQxMnU2dWdr/azNyMUtCeVFWcG90/VEdMS2NLWHFPLXZt/c0tJPQ");
   background-size: cover;
   background-attachment: fixed;
@@ -55,8 +55,8 @@ h1 {
   text-align: center;
   margin-top: 2em;
   font-size: 2.4em;
-  font-family: Helvetica, Arial, sans-serif;
-  letter-spacing: 1px;
+  font-family:  Helvetica, Arial, sans-serif;
+  letter-spacing:  1px;
 }
 
 h2 {
@@ -80,9 +80,9 @@ ul li {
 /* ---- SECTIONS ---- */
 section,
 .tuto-section {
-  width: 70%;
+  width:  70%;
   margin: 2em auto;
-  padding: 1.5em;
+  padding:  1.5em;
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(4px);
   border-radius: 12px;
@@ -97,4 +97,108 @@ address {
   text-align: center;
   font-style: normal;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* ---- CLOCK + COUNTER ---- */
+.clock-counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  margin: 2em auto;
+  width: 70%;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter:  blur(4px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.compteur-visites {
+  text-align: center;
+  font-size: 0.9em;
+  opacity: 0.9;
+  width: 100%;
+  order: -1;
+}
+
+. compteur-visites span {
+  display: block;
+  margin-bottom: 0.4em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.compteur-visites a {
+  display: inline-block;
+  color: #e6e6e6;
+  text-decoration: none;
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+
+.compteur-visites a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    padding-left: 1em;
+  }
+
+  ul.navbar {
+    position: static;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-bottom: 2em;
+  }
+
+  ul.navbar li {
+    flex: 1;
+    min-width: 140px;
+    margin:  0;
+    padding: 0.5em;
+    font-size: 0.9em;
+  }
+
+  section,
+  .tuto-section,
+  .clock-counter {
+    width: 90%;
+    padding: 1em;
+  }
+
+  h1 {
+    font-size: 1.8em;
+    margin-top: 1em;
+  }
+
+  p,
+  ul {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  p,
+  ul {
+    font-size: 0.95em;
+  }
+
+  .clock-counter {
+    gap: 1em;
+  }
 }
