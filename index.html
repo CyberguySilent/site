@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Camera.exe — site consacré aux caméras de surveillance : histoire, tutoriels, comparatifs et réglementation.">
+  <title>Page d'accueil — Camera.exe</title>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main" style="position:absolute;left:-9999px;">Aller au contenu</a>
+
+  <header>
+    <!-- NAVBAR -->
+    <nav class="navbar-wrap" aria-label="Navigation principale" data-aos="fade-right" data-aos-delay="150" data-aos-duration="800">
+      <ul class="navbar">
+        <li><a href="index.html" aria-current="page">Page d'accueil</a></li>
+        <li><a href="histoire/histoire.html">Histoire des caméras</a></li>
+        <li><a href="https://www.quechoisir.org/guide-d-achat-camera-de-surveillance-n44160/" target="_blank" rel="noopener noreferrer">Comparaison de caméras</a></li>
+        <li><a href="tuto/tuto.html">Installation des caméras</a></li>
+        <li><a href="loi/loi.html">Loi &amp; Règlementation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- TITRE -->
+    <h1 data-aos="zoom-in">Bienvenue sur Camera.exe</h1>
+
+    <!-- INTRO -->
+    <section data-aos="fade-up" data-aos-delay="200" data-aos-duration="900">
+      <p>Bienvenue sur la page officielle de Camera.exe.</p>
+      <p>Ce site parle exclusivement de caméras de surveillance.</p>
+    </section>
+
+    <!-- CONTENU -->
+    <section data-aos="fade-up" data-aos-delay="300" data-aos-duration="900">
+      <h2>Contenu du site :</h2>
+      <ul>
+        <li>📜 Histoire de la vidéosurveillance</li>
+        <li>🔧 Tutoriel d'installation</li>
+        <li>📷 Comparaison de modèles</li>
+      </ul>
+    </section>
+
+    <!-- HORLOGE + COMPTEUR (compteur placé au-dessus de l'horloge) -->
+    <div class="clock-counter" data-aos="fade-up" data-aos-delay="200" data-aos-duration="900">
+
+      <!-- COMPTEUR: placé au-dessus de l'horloge -->
+      <div class="compteur-visites" aria-hidden="false">
+        <a href="https://www.freevisitorcounters.com" target="_blank"</a>
+        <script type="text/javascript" src="https://www.freevisitorcounters.com/auth.php?id=32c96122a010d16ec3b3c3dbc97ef4e8cc40568d"></script>
+        <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1477668/t/2"></script>
+      </div>
+
+      <!-- HORLOGE: responsive iframe, no deprecated attributes -->
+      <div class="clock-wrapper" style="max-width:800px;">
+        <iframe
+          title="Horloge — Europe/Paris"
+          src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=fr&size=large&timezone=Europe%2FParis"
+          style="width:100%;height:140px;border:0;"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+          sandbox="allow-same-origin allow-scripts allow-popups">
+        </iframe>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <address data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">
+      Fait le <time datetime="2025-11-27">27 novembre 2025</time><br>
+      par Huseyin.
+    </address>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Init AOS after the library loads
+    if (typeof AOS !== 'undefined') {
+      AOS.init({ once: true });
+    }
+  </script>
+</body>
+</html>
